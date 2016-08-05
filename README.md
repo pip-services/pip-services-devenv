@@ -2,11 +2,11 @@
 
 This is a dockerized environment to support development and testing of Pip.Services. 
 
-**docker-compose.yaml** file contains configuration of supported databases and infrastructure services like mongodb, memcached, etc. They configured to use internal storage, so after restart their state is lost.
+**docker-compose.yaml** file contains configuration of supported databases and infrastructure services like mongodb, memcached, and others. They configured to use internal storage, so after restart their state is lost.
 
 ## Installation
 
-Before using the infrastructure you shall install [Docker for Windows](https://docs.docker.com/docker-for-windows/). If you are planning to use Vagrant with VirtualBox or VMware, install [Docker Toolbox](https://www.docker.com/products/docker-toolbox) instead since the latest version of Docker uses Hiper-V and conflicts with other VM managers.
+Before using the environment you shall install [Docker for Windows](https://docs.docker.com/docker-for-windows/). If you are planning to use Vagrant with VirtualBox or VMware, install [Docker Toolbox](https://www.docker.com/products/docker-toolbox) instead since the latest version of Docker uses Hiper-V and conflicts with other VM managers.
 
 ## Start / Stop
 
