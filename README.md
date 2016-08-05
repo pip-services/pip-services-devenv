@@ -12,7 +12,7 @@ Before using the infrastructure you shall install [Docker for Windows](https://d
 
 To start the services:
 ```bash
-docker-compose up [mysql memcached]
+docker-compose up
 ```
 
 To stop the services:
