@@ -22,7 +22,7 @@ docker-compose stop
 
 To remove the services:
 ```bash
-docker-compose rm --all
+docker-compose rm --force
 ```
 
 ## Special commands
