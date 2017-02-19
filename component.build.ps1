@@ -1,3 +1,7 @@
+task Install {
+    # Do nothings
+}
+
 task Start {
    Invoke-External { 
        & docker-compose up -d
