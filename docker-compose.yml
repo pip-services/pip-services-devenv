@@ -26,3 +26,12 @@ services:
     container_name: redis
     ports:
       - "6379:6379"
+
+  fluentd:
+    image: fluent/fluentd
+    container_name: fluent
+    volumes:
+     - ./logs:/fluentd/log
+    ports:
+     - "24224:24224"
+     
