@@ -2,11 +2,11 @@ version: "2"
 
 services:
 
-  memcached:
-    image: memcached:latest
-    container_name: memcached
-    ports:
-      - "11211:11211"
+  # memcached:
+  #   image: memcached:latest
+  #   container_name: memcached
+  #   ports:
+  #     - "11211:11211"
 
   mongo:
     image: mongo:latest
@@ -15,11 +15,18 @@ services:
       - "27017:27017"
 
   couchbase:
-    image: couchbase:latest
+    image: couchbase/server-sandbox:6.0.1
     container_name: couchbase
     ports:
       - "8091-8094:8091-8094"
-#      - "11210-11211:11210-11211"
+      - "11210-11211:11210-11211"
+
+  # couchbase:
+  #   image: couchbase
+  #   container_name: couchbase
+  #   ports:
+  #     - "8091-8094:8091-8094"
+  #     - "11210-11211:11210-11211"
 
   mosquitto:
     image: toke/mosquitto
