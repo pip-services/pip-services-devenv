@@ -23,7 +23,28 @@ services:
       POSTGRES_DB: test
     ports:
       - "5432:5432"
-    
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_DATABASE: test
+    ports:
+      - "3306:3306"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: sqlserver
+    ports:
+      - "1433:1433"
+          
   couchbase:
     image: couchbase/server-sandbox:6.0.1
     container_name: couchbase
